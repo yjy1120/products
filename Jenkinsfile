@@ -26,7 +26,7 @@ podTemplate(label: '12-mall',
         stage('Build'){
             container('docker'){
                 script {
-                    appImage = docker.build("979050235289.dkr.ecr.ap-southeast-2.amazonaws.com/"+"${env.JOB_NAME}")
+                    appImage = docker.build("mcgpfhd/products")
                 }
             }
         }
