@@ -6,6 +6,7 @@ podTemplate(label: '12-mall',
   ],
   volumes: [ 
     hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'), 
+    persistentVolumeClaim(mountPath: '/root/.m2/repository', claimName: 'maven-repo', readOnly: false)
   ]
 ) {
     node('12-mall') { 
