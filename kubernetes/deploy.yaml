@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: product
-          image: mcgpfhd/product
+          image: mcgpfhd/products:${BUILD_NUMBER}
           ports:
             - containerPort: 8080
